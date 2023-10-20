@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.List;
 
 public class GestionEtudiant implements University<Etudiant>{
 
@@ -50,7 +49,7 @@ public class GestionEtudiant implements University<Etudiant>{
 
     @Override
     public void trierEtudiantsParId() {
-        Collections.sort(listEtudiant, new Etudiant());
+        Collections.sort(listEtudiant);
     }
 
     @Override

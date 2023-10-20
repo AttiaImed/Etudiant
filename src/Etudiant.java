@@ -1,6 +1,6 @@
 import java.util.Comparator;
 
-public class Etudiant implements Comparator<Etudiant> {
+public class Etudiant implements Comparable<Etudiant> {
     private int id;
     private String nom;
     private String prenom;
@@ -37,10 +37,7 @@ public class Etudiant implements Comparator<Etudiant> {
         this.prenom = prenom;
     }
 
-    @Override
-    public int compare(Etudiant o1, Etudiant o2) {
-        return o1.getId() - o2.getId();
-    }
+
 
     @Override
     public boolean equals(Object obj) {
@@ -59,4 +56,8 @@ public class Etudiant implements Comparator<Etudiant> {
                 '}';
     }
 
+    @Override
+    public int compareTo(Etudiant o) {
+            return this.getId() - o.getId();
+    }
 }
